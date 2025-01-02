@@ -104,7 +104,10 @@ public class WebPage {
     }
 
     public void clickCart() {
-        driver.findElement(By.xpath("//a[@class='nav-link'][contains(.,'Cart')]")).click();
+        By byLocator = By.xpath("//a[@class='nav-link'][contains(.,'Cart')]");
+        new WebDriverWait(driver, Duration.ofSeconds(5)).
+                until(ExpectedConditions.elementToBeClickable(byLocator));
+        driver.findElement(byLocator).click();
     }
 
     public boolean tableProducts() {
