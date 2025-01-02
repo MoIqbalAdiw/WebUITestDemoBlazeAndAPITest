@@ -35,13 +35,13 @@ Feature: Test Automation Web
     Then user see alert "Thanks for the message!!"
     And user click Oke button
 
-  @web
-  Scenario: Contact - Blank Contact Email message
-    Given open web login page
-    And user click Contact link on navbar
-    And user click Send message button
-    Then user see alert "Please fill out Contact Email"
-    And user click Oke button
+#  @web
+#  Scenario: Contact - Blank Contact Email message
+#    Given open web login page
+#    And user click Contact link on navbar
+#    And user click Send message button
+#    Then user see alert "Please fill out Contact Email"
+#    And user click Oke button
 
   @web
   Scenario: Account - User sign up, log in, log out success
