@@ -39,15 +39,18 @@ jobs:
         name: Cucumber Report
         path: reports   
     # Deploy to Github Pages
+    - name: Use GitHub Token
+      uses: frankdejonge/use-github-token@1.1.0
+          
     - name: Deploy report to Github Pages
       if: always()
       uses: peaceiris/actions-gh-pages@v3.7.3
       with:
-        # PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        # PUBLISH_DIR: reports
-        token: ${{ secrets.GITHUB_TOKEN }}
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        folder: reports
-        target: gh-pages
+        PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUBLISH_DIR: reports
+        # token: ${{ secrets.GITHUB_TOKEN }}
+        # github-token: ${{ secrets.GITHUB_TOKEN }}
+        # folder: reports
+        # target: gh-pages
     
           
