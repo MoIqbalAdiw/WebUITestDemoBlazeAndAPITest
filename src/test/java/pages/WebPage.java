@@ -15,7 +15,7 @@ import static helper.Utility.driver;
 public class WebPage {
     public void openBrowser() {
         driver.get("https://www.demoblaze.com/");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
 
     public boolean cekLogo() {
